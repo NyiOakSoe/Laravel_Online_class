@@ -1,7 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeControllerResource;
 
 
 /*
@@ -14,6 +15,6 @@ use App\Http\Controllers\HomeController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-Route::get('/',[HomeController::class,'index']);
+// Route::get('/post',[HomeControllerResource::class,'testIndex'])->name('indexName');
+Route::resource('/post',HomeControllerResource::class);
 
